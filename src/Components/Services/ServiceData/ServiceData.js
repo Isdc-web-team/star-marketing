@@ -1,18 +1,14 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
-
-const ServiceData = ( services ) => {
-    const [service, setService] = useState ([])
+const ServiceData = ({ service }) => {
     return (
-
         <div className="col-md-3 ">
             <div className="card card-zoom mx-2">
-
                 <div className="m-3">
-                    <img className="img-fluid" src={service.img} alt="" />
-
+                    <img
+                        className="img-fluid"
+                        src={`http://localhost:5000/${service.image}`}
+                        alt=""
+                    />
                 </div>
-
 
                 <div className="text-center p-3">
                     <h4>{service.title}</h4>
@@ -21,9 +17,7 @@ const ServiceData = ( services ) => {
                     <button className="btn btn-primary">Check Now</button>
                 </div>
             </div>
-
         </div>
-
     );
 };
 
